@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+    <link rel="stylesheet" href="./css/contactform.css" />
+    <title>Faithful Lenses - Contact Form</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="./index.html">
+            <img src="./images/logo copy.png" alt="logo" />
+          </a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <section class="section__container contact__container" id="contact">
+      <h2 class="section__header">Contact Us</h2>
+      <form id="contact-form">
+        <div class="form__group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form__group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer__bar">
+        Copyright © 2025 Lucas Furtado. All rights reserved.
+        <p>Email: <a href="mailto:your-email@uri.edu">lucas_furtado@uri.edu</a></p>
+      </div>
+    </footer>
+
+    <script src="./js/loadJSON.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/portfolio.js"></script>
+  </body>
+</html>

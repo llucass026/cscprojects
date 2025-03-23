@@ -1,0 +1,30 @@
+<blogs>
+  <blog>
+    <date>3.11.2023</date>
+    <title>5 Tips for Capturing Stunning Portraits</title>
+    <description>
+      Discover simple yet powerful techniques to enhance your portrait photography, from mastering lighting to connecting with your subject for authentic shots.
+    </description>
+  </blog>
+  <blog>
+    <date>10.01.2024</date>
+    <title>The Art of Visual Storytelling in Filmmaking</title>
+    <description>
+      Explore how to craft compelling narratives through cinematography, sound design, and editing that leave a lasting impact on your audience.
+    </description>
+  </blog>
+  <blog>
+    <date>15.04.2024</date>
+    <title>Essential Gear Every Photographer Needs</title>
+    <description>
+      A comprehensive guide to must-have equipment, from cameras to lenses and accessories, for both beginners and seasoned photographers.
+    </description>
+  </blog>
+  <blog>
+    <date>25.06.2024</date>
+    <title>Create Cinematic Videos with Minimal Gear</title>
+    <description>
+      Practical advice for achieving the professional-quality videos without breaking your bank, perfect for new and aspiring filmmakers on a budget.
+    </description>
+  </blog>
+</blogs>
