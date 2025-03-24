@@ -39,7 +39,7 @@ function serveStaticFile(filePath, res) {
 }
 
 // Create the HTTP server
-const server = http.createServer((req, res) => {
+http.createServer(function(req, res) {
     // Normalize the URL by removing the querystring, optional trailing slash, and making it lowercase
     let urlPath = req.url.split('?')[0].replace(/\/$/, '').toLowerCase();
 
@@ -64,9 +64,6 @@ const server = http.createServer((req, res) => {
 
     // Serve the static file
     serveStaticFile(filePath, res);
-});
-
-// Start the server and listen on the specified port
-server.listen(port, () => {
+}).listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
