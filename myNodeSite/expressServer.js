@@ -13,6 +13,11 @@ const port = 1337;
 // Define the path to the public directory inside your myNodeSite directory
 const publicDir = path.join(__dirname, 'public');
 
+// Function to serve static files
+function serveStaticFile(res, filePath, contentType) {
+    res.sendFile(path.join(publicDir, filePath), { headers: { 'Content-Type': contentType } });
+}
+
 // Specify css as a root directory from which to serve static files
 app.use('/css', express.static(path.join(publicDir, 'css')));
 
@@ -22,24 +27,70 @@ app.use('/images', express.static(path.join(publicDir, 'images')));
 // Specify js as a root directory from which to serve static files
 app.use('/js', express.static(path.join(publicDir, 'js')));
 
-// Serve the home page (index.html) when the user navigates to the root path
-app.get('/', (req, res) => {
-    res.sendFile(path.join(publicDir, 'index.html'));
-});
+// Serve files based on the requested path using a switch statement
+app.get('*', (req, res) => {
+    const urlPath = req.path.toLowerCase();
 
-// Serve the about page (about.html) when the user navigates to /about
-app.get('/about', (req, res) => {
-    res.sendFile(path.join(publicDir, 'about.html'));
-});
+    switch (urlPath) {
+        case '/':
+        case '/index':
+            serveStaticFile(res, 'index.html', 'text/html');
+            break;
 
-// Serve the contact page (contact.html) when the user navigates to /contact
-app.get('/contact', (req, res) => {
-    res.sendFile(path.join(publicDir, 'contact.html'));
-});
+        case '/about':
+            serveStaticFile(res, 'about.html', 'text/html');
+            break;
 
-// Add a wildcard for any route not defined and respond by serving the 404 page
-app.use((req, res) => {
-    res.status(404).sendFile(path.join(publicDir, '404.html'));
+        case '/contact':
+            serveStaticFile(res, 'contact.html', 'text/html');
+            break;
+        case "/images/about.jpg":
+            serveStaticFile(res, 'images/about.jpg', 'image/jpeg');
+            break;
+        case "/images/Alternative.jpg":
+            serveStaticFile(res, 'images/Alternative.jpg', 'image/jpeg');
+            break;
+        case "/images/logo.png":
+            serveStaticFile(res, 'images/logo.png', 'image/png');
+            break;
+        case "/images/Portfolio1.jpeg":
+            serveStaticFile(res, 'images/Portfolio1.jpg', 'image/jpeg');
+            break;
+        case "/images/Portfolio2.jpeg":
+            serveStaticFile(res, 'images/Portfolio2.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio3.jpeg":
+            serveStaticFile(res, 'images/Portfolio3.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio4.jpeg":
+            serveStaticFile(res, 'images/Portfolio4.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio6.jpeg":
+            serveStaticFile(res, 'images/Portfolio6.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio7.jpeg":
+            serveStaticFile(res, 'images/Portfolio7.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio8.jpeg":
+            serveStaticFile(res, 'images/Portfolio8.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio9.jpeg":
+            serveStaticFile(res, 'images/Portfolio9.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio10.jpeg":
+            serveStaticFile(res, 'images/Portfolio10.jpg', 'image/jpeg');
+            break;
+        case "/images/portfolio11.jpeg":
+            serveStaticFile(res, 'images/Portfolio11.jpg', 'image/jpeg');
+            break;
+        case "/images/Untitled-3.jpg":
+            serveStaticFile(res, 'images/Untitled-3.jpg', 'image/jpeg');
+            break;
+        default:
+            // Serve the 404 page for undefined routes
+            serveStaticFile(res, '404.html', 'text/html');
+            break;
+    }
 });
 
 // Make the app listen on the port and output the URL to access the server to the console
