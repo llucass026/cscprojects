@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="/"><img src="/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-3-line"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        {{{body}}}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__bar">
+            Copyright © 2025 Lucas Furtado. All rights reserved
+            <p>Email: <a href="mailto:lucas_furtado@uri.edu">lucas_furtado@uri.edu</a></p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript libraries -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Internal JavaScript files -->
+    <script src="/js/loadBlog.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/portfolio.js"></script>
+    <script src="/js/loadReviews.js"></script>
+</body>
+</html>

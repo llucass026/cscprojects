@@ -1,0 +1,19 @@
+{
+  "name": "faithful-lenses",
+  "version": "1.0.0",
+  "description": "Faithful Lenses",
+  "main": "handlebarsServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node handlebarsServer.js"
+  },
+  "author": "Lucas Furtado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "express-handlebars": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=v16"
+  }
+}
