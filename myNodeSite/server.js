@@ -55,7 +55,7 @@ http.createServer(function(req, res) {
         filePath = 'public/reviews.html';
     } else if (urlPath.startsWith('/css/')) {
         filePath = path.join('public', urlPath);
-    } else if (urlPath.startsWith('/Images/')) {
+    } else if (urlPath.startsWith('/images/')) {
         filePath = path.join('public', urlPath);
     } else if (urlPath.startsWith('/js/')) {
         filePath = path.join('public', urlPath);
